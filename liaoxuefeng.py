@@ -12,60 +12,6 @@ import Queue
 import codecs
 
 
-# #url="http://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000/001431756919644a792ee4ead724ef7afab3f7f771b04f5000"
-# #url='http://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000/0014317799226173f45ce40636141b6abc8424e12b5fb27000'
-# url='http://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000/001431608990315a01b575e2ab041168ff0df194698afac000'
-# headers={"User-Agent":'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Mobile Safari/537.36'}
-# res=requests.get(url=url,headers=headers)
-# #pdfkit.from_string((str(res.content)).encode('utf-8'),'demo.pdf')
-#
-# options = {
-#     'page-size': 'Letter',
-#     'margin-top': '0.75in',
-#     'margin-right': '0.75in',
-#     'margin-bottom': '0.75in',
-#     'margin-left': '0.75in',
-#     'encoding': "UTF-8",
-#     'custom-header': [
-#         ('Accept-Encoding', 'gzip')
-#     ],
-#     'cookie': [
-#         ('cookie-name1', 'cookie-value1'),
-#         ('cookie-name2', 'cookie-value2'),
-#     ],
-#     'outline-depth': 10,
-# }
-#
-# html_template="""
-# <!DOCTYPE html>
-# <html lang="en">
-# <head>
-#     <meta charset="UTF-8">
-# </head>
-# <body>
-# {0}
-# </body>
-# </html>
-# """
-#
-#
-# soup=BeautifulSoup(res.text,'lxml')
-#
-# title=soup.find("div",class_='x-content').find("h4").get_text() #标题
-# center_tag=soup.new_tag('center')
-# title_tag=soup.new_tag("h1")
-# title_tag.string=title
-# center_tag.insert(1,title_tag)
-# content=soup.find("div",class_='x-wiki-content')  #内容
-# content.insert(1,center_tag)
-# img_tag=content.find_all("img")
-# for img_url in img_tag:
-#     img_url['src']='http://www.liaoxuefeng.com'+img_url['src']
-# #img_tag['src']='http://www.baidu.com'
-# html_template=html_template.format(content)
-# pdfkit.from_string(html_template,'demo.pdf',options=options)
-
-
 class crawl:
     def __init__(self):
         self.file=codecs.open("python.txt",'w',encoding='utf-8')
